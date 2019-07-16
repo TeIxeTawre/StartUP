@@ -627,3 +627,61 @@ form {
       display: none; }
       form .form-bottom .success-form span {
         color: #c0301c; }
+
+.footer {
+  background-color: #c0301c;
+  padding: 100px 0; }
+  .footer p {
+    color: #fff;
+    margin-bottom: 0; }
+  .footer .headline {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 100% !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 -7px;
+    margin-bottom: 30px; }
+    .footer .headline:after {
+      background-color: #fff; }
+    .footer .headline a {
+      color: #fff;
+      text-decoration: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0 7px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .footer .headline .facebook:hover {
+      border-color: #0075EE;
+      -webkit-box-shadow: 0 0 15px #0075EE;
+              box-shadow: 0 0 15px #0075EE;
+      color: #0075EE; }
+    .footer .headline .twitter:hover {
+      border-color: #00aced;
+      -webkit-box-shadow: 0 0 15px #00aced;
+              box-shadow: 0 0 15px #00aced;
+      color: #00aced; }
+    .footer .headline .vk:hover {
+      border-color: #45668e;
+      -webkit-box-shadow: 0 0 15px #45668e;
+              box-shadow: 0 0 15px #45668e;
+      color: #45668e; }
+    .footer .headline .instagram:hover {
+      border-color: #517fa4;
+      -webkit-box-shadow: 0 0 15px #517fa4;
+              box-shadow: 0 0 15px #517fa4;
+      color: #517fa4; }
