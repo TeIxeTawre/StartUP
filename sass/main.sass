@@ -187,6 +187,7 @@ main
      margin-right: 6px
   .person
    width: 263px
+   height: 100%
    &-text
     color: $black
     h4
@@ -204,10 +205,7 @@ main
    &-main
     height: 250px
     position: relative
-    display: flex
-    justify-content: center
-    align-items: flex-end
-    padding-bottom: 32px
+    overflow: hidden
     a
      display: flex
      justify-content: center
@@ -223,19 +221,29 @@ main
      &:hover
       background-color: $red-color
     &:hover
-     *
-      display: flex !important
-     &:after
-      display: block    
-    &::after
-     content: ''
-     position: absolute
-     top: 0
+     .social
+      bottom: 0
+    .social
+     position: relative
+     bottom: -100%
      left: 0
-     display: none
+     display: flex
+     justify-content: center
+     align-items: flex-end
+     padding-bottom: 32px
      width: 100%
      height: 100%
      background-color: rgba($black, 0.5)
+     transition: .2s
+     .touch-up
+      width: 10%
+      height: 10%
+      transform: rotate(45deg)
+      border-top: 3px solid $red-color
+      border-left: 3px solid $red-color
+      position: absolute
+      top: -10%
+      left: 45%
 .works
  padding-bottom: 0 !important
  .subtitle
@@ -263,6 +271,7 @@ main
   .passive
    position: absolute
    top: -100%
+   left: 0
    display: flex
    flex-direction: column
    justify-content: center
@@ -272,6 +281,16 @@ main
    background-color: rgba($red-color, 0.5)
    transition: all .3s ease-in-out
    color: #fff
+   .touch-down
+    width: 15px
+    height: 15px
+    transform: rotate(45deg)
+    border-bottom: 3px solid $red-color
+    border-right: 3px solid $red-color
+    position: absolute
+    bottom: -10%
+    left: 50%
+    margin-left: -8px
    h3
     font-weight: 400
     font-size: 1.8rem
@@ -542,6 +561,6 @@ form
     color: #45668e
   .instagram
    &:hover
-    border-color: #517fa4
-    box-shadow: 0 0 15px #517fa4
-    color: #517fa4
+    border-color: #FD1D1D
+    box-shadow: 0 0 15px #FD1D1D
+    color: #FD1D1D

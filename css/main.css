@@ -227,7 +227,8 @@ main {
         border-right: 2px solid #ddd;
         margin-right: 6px; }
   .about .carousel-men .person {
-    width: 263px; }
+    width: 263px;
+    height: 100%; }
     .about .carousel-men .person-text {
       color: #555555; }
       .about .carousel-men .person-text h4 {
@@ -245,16 +246,7 @@ main {
     .about .carousel-men .person-main {
       height: 250px;
       position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: end;
-          -ms-flex-align: end;
-              align-items: flex-end;
-      padding-bottom: 32px; }
+      overflow: hidden; }
       .about .carousel-men .person-main a {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -276,21 +268,37 @@ main {
         transition: 0.2s; }
         .about .carousel-men .person-main a:hover {
           background-color: #c0301c; }
-      .about .carousel-men .person-main:hover * {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
-        display: flex !important; }
-      .about .carousel-men .person-main:hover:after {
-        display: block; }
-      .about .carousel-men .person-main::after {
-        content: "";
-        position: absolute;
-        top: 0;
+      .about .carousel-men .person-main:hover .social {
+        bottom: 0; }
+      .about .carousel-men .person-main .social {
+        position: relative;
+        bottom: -100%;
         left: 0;
-        display: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        padding-bottom: 32px;
         width: 100%;
         height: 100%;
-        background-color: rgba(85, 85, 85, 0.5); }
+        background-color: rgba(85, 85, 85, 0.5);
+        -webkit-transition: 0.2s;
+        transition: 0.2s; }
+        .about .carousel-men .person-main .social .touch-up {
+          width: 10%;
+          height: 10%;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          border-top: 3px solid #c0301c;
+          border-left: 3px solid #c0301c;
+          position: absolute;
+          top: -10%;
+          left: 45%; }
 
 .works {
   padding-bottom: 0 !important; }
@@ -326,6 +334,7 @@ main {
     .works-card .passive {
       position: absolute;
       top: -100%;
+      left: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -345,6 +354,17 @@ main {
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       color: #fff; }
+      .works-card .passive .touch-down {
+        width: 15px;
+        height: 15px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        border-bottom: 3px solid #c0301c;
+        border-right: 3px solid #c0301c;
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        margin-left: -8px; }
       .works-card .passive h3 {
         font-weight: 400;
         font-size: 1.8rem;
@@ -681,7 +701,7 @@ form {
               box-shadow: 0 0 15px #45668e;
       color: #45668e; }
     .footer .headline .instagram:hover {
-      border-color: #517fa4;
-      -webkit-box-shadow: 0 0 15px #517fa4;
-              box-shadow: 0 0 15px #517fa4;
-      color: #517fa4; }
+      border-color: #FD1D1D;
+      -webkit-box-shadow: 0 0 15px #FD1D1D;
+              box-shadow: 0 0 15px #FD1D1D;
+      color: #FD1D1D; }
