@@ -1,0 +1,501 @@
+@import "colors"
+
+// main styles
+html
+ font-size: 10px
+body
+ width: 100vw
+ overflow-x: hidden
+ margin: 0
+ font-family: 'Montserrat', sans-serif
+section
+ padding: 100px 0
+ color: $black
+.headline
+ font-size: 2rem
+ text-transform: uppercase
+ color: $black
+ position: relative
+ text-align: center
+ font-weight: 400
+ margin: 0 0 30px 0
+ padding-bottom: 32px
+ &::after
+  content: ''
+  display: block
+  height: 1px
+  width: 50px
+  background-color: $black
+  position: absolute
+  bottom: 0
+  left: 50%
+  margin-left: -25px
+.subtitle
+ margin: 0
+ padding: 0 30px
+ margin-bottom: 70px
+ text-align: center
+ font-size: 1.6rem
+ font-family: 'Roboto Slab', serif
+ color: $black
+.btn
+ display: inline-block
+ font-size: 1.6rem
+ color: #fff
+ text-decoration: none
+ text-transform: uppercase
+ border: 2px solid #fff
+ border-radius: 2px
+ padding: 15px 30px
+
+ // just styles
+.header
+ height: 100vh
+ background-image: url(../img/header-bg.png)
+ background-size: cover
+ background-position: center
+ position: relative
+ &::before
+  content: ''
+  display: block
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  background-color: rgba( black, 0.4)
+ .container
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 70%
+.top-nav
+ margin-top: 40px
+ .logo
+  a
+   font-size: 2.4rem
+   font-weight: 700
+   color: #fff
+   text-decoration: none
+ &_menu
+  list-style: none
+  margin: 0 -17px
+  padding: 0
+  height: 100%
+  display: flex
+  align-items: center
+  li
+   padding: 0 17px
+   height: 100%
+   display: flex
+   align-items: center
+   a
+    color: #fff
+    text-decoration: none
+    font-size: 1.4rem
+main
+ text-align: center
+ color: #fff
+ h1
+  font-size: 4.8rem
+  font-weight: 400
+  margin: 0
+ p
+  font-size: 2rem
+  font-family: 'Roboto Slab', serif
+  margin: 32px 0 50px 0
+.services
+ margin-top: -50px !important
+ &-card
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 50px
+  a
+   display: flex
+   justify-content: center
+   align-items: center
+   margin-bottom: 30px
+   width: 87px
+   height: 87px
+   border-radius: 50%
+   color: $red-color
+   border: 2px solid #ddd
+   font-size: 4rem
+   text-decoration: none
+   transition: .3s
+   &:hover
+    color: #fff
+    background-color: $red-color
+  &_text
+   font-size: 1.4rem
+   color: $black
+   h4
+    font-weight: 400
+    text-transform: uppercase
+   p
+    font-family: 'Roboto Slab', serif
+.about
+ &-column
+  font-family: 'Roboto Slab', serif
+  font-size: 1.4rem
+ .carousel-men
+  margin-top: 70px
+  text-align: center
+  #men
+   display: flex
+   .owl-nav
+    height: 0
+   .owl-prev, .owl-next
+    position: absolute
+    top: 40%
+    width: 40px
+    height: 40px
+    border: none
+    border-radius: 0
+    font-size: 5rem !important
+    margin: 0
+    margin-top: -20px
+    display: flex !important
+    justify-content: center
+    align-items: center
+    background: rgba($black, 0.5)
+    &:hover
+     background: $red-color
+    &::after 
+     content: ''
+     display: block
+     width: 12px
+     height: 12px
+     transform: rotateZ(45deg)
+    &:focus, &:active
+     outline: none
+     border: none
+    & span
+     display: none
+   .owl-prev
+    left: 0
+    &::after
+     border-bottom: 2px solid #ddd
+     border-left: 2px solid #ddd
+     margin-left: 6px
+   .owl-next
+    right: 0
+    &::after
+     border-top: 2px solid #ddd
+     border-right: 2px solid #ddd
+     margin-right: 6px
+  .person
+   width: 263px
+   &-text
+    color: $black
+    h4
+     font-size: 1.4em
+     font-weight: 400
+     text-transform: uppercase
+     margin: 0
+     margin-top: 20px
+    p
+     font-family: 'Roboto Slab', serif
+     font-weight: 700
+     font-size: 1.3rem
+     margin: 0
+     margin-top: 15px
+   &-main
+    height: 250px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    padding-bottom: 32px
+    a
+     display: flex
+     justify-content: center
+     align-items: center
+     color: #fff
+     width: 30px
+     height: 30px
+     font-size: 1.6rem
+     text-decoration: none
+     z-index: 1
+     margin: 0 2px
+     transition: .2s
+     &:hover
+      background-color: $red-color
+    &:hover
+     *
+      display: flex !important
+     &:after
+      display: block    
+    &::after
+     content: ''
+     position: absolute
+     top: 0
+     left: 0
+     display: none
+     width: 100%
+     height: 100%
+     background-color: rgba($black, 0.5)
+.works
+ padding-bottom: 0 !important
+ .subtitle
+  display: flex
+  justify-content: center
+  ul
+   display: flex
+   list-style: none
+   padding: 0
+   margin: -10px -12px
+   li
+    margin: 10px 12px !important
+    a
+     text-decoration: none
+     color: inherit
+     transition: all .2s
+     &:hover
+      color: $red-color
+ &-menu__active
+  color: $red-color !important
+ &-card
+  position: relative
+  overflow: hidden
+  margin-top: 30px
+  .passive
+   position: absolute
+   top: -100%
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+   width: 100%
+   height: 100%
+   background-color: rgba($red-color, 0.5)
+   transition: all .3s ease-in-out
+   color: #fff
+   h3
+    font-weight: 400
+    font-size: 1.8rem
+    margin: 0
+   p
+    font-weight: 1.2rem
+    font-family: 'Roboto Slab', serif
+    margin: 0
+    margin-top: 16px
+    margin-bottom: 24px
+   a
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #fff
+    color: $red-color
+    text-decoration: none
+    width: 102px
+    height: 38px
+    font-family: 'Roboto Slab', serif
+    font-size: 1.4rem
+    text-transform: uppercase
+    padding-top: 3px
+    &::after
+     content: ''
+     display: block
+     width: 8px
+     height: 8px
+     transform: rotate(45deg)
+     border-top: 1px solid $red-color
+     border-right: 1px solid $red-color
+     margin-left: 6px
+  .active
+   img
+    width: 100%
+  &:hover
+   .passive
+    top: 0
+ &-parallax
+  padding: 100px 0
+  margin-top: 80px
+  background-color: rgba($red-color, 0.5) !important
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  h2
+   font-family: 'Roboto Slab', serif
+   font-size: 3rem
+   font-weight: 400
+   color: #fff
+   margin: 0
+   margin-top: 6px
+   text-align: center
+   padding: 0 30px
+  a
+   margin-top: 50px
+.blog
+ .container
+  margin-top: -38px
+  margin-bottom: -38px
+.post
+ border-bottom: 1px solid #ddd
+ &-a
+  color: $grey
+  text-decoration: none
+  transition: .3s
+  &:hover
+   color: $red-color !important
+ &:last-child
+  border: none
+ &-image
+  margin: 38px 0
+  img
+   width: 100%
+ .head
+  display: flex
+ &-text
+  margin: 38px 0
+  padding-left: 38px
+  .day
+   width: 72px
+   height: 72px
+   border: 2px solid $black
+   color: $grey
+   display: flex
+   justify-content: center
+   align-items: center
+   flex-direction: column
+   p
+    margin: 0
+    font-weight: 700
+    font-size: 2rem
+    text-transform: uppercase
+   .month
+    font-size: 1.4rem
+  .title
+   display: flex
+   flex-direction: column
+   justify-content: center
+   padding-left: 28px
+   h4
+    font-size: 1.6rem
+    text-transform: uppercase
+    font-weight: 400
+    margin: 0
+    a
+     color: $black
+   p
+    font-size: 1.3rem
+    font-style: italic
+    font-family: 'Roboto Slab', serif
+    color: $grey
+    margin: 0
+    margin-top: 8px
+  .description
+   margin: 0
+   margin-top: 24px
+   font-family: 'Roboto Slab', serif
+   font-size: 1.4rem
+  .read-more
+   font-family: 'Roboto Slab', serif
+   font-size: 1.3rem
+   text-transform: uppercase
+   display: inline-block
+   margin-top: 34px
+   font-weight: 700
+.clients
+ .container
+  .row
+   a
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 30px 0
+    img
+     display: block
+.client-carousel
+ .owl-dots
+  .active
+   span
+    background-color: $red-color !important
+  .owl-dot
+   &:focus, &:active
+    outline: none
+    border: none
+   &:hover
+    span
+     background-color: rgba($red-color, 0.6)
+ .item
+  font-family: 'Roboto Slab', serif
+  .comment
+   margin: 0 auto
+   padding: 30px
+   max-width: 760px
+   text-align: center
+   font-style: italic
+   font-size: 1.8rem
+  .author
+   padding-top: 50px
+   text-align: center
+   font-size: 2rem
+.contacts
+ .block
+  margin-top: 35px
+  display: flex
+  font-size: 1.4rem
+  .text
+   margin-left: 18px
+   h5
+    text-transform: uppercase
+    font-weight: 400
+    margin: 0
+    font-size: 1.4rem
+   p
+    font-family: 'Roboto Slab', serif
+    font-size: 1.2rem
+form
+ display: flex
+ flex-direction: column
+ input, 
+ textarea
+  padding: 14px
+  border: 1px solid $black
+  color: $black
+  font-family: 'Roboto Slab', serif
+  &:focus, &:active
+   outline: none
+   border-color: $red-color
+  &::-webkit-input-placeholder
+   color: $black
+   text-transform: uppercase
+   font-size: 1.2rem
+  &::-moz-placeholder
+   color: $black
+   text-transform: uppercase
+   font-size: 1.2rem
+ textarea
+  padding: 14px 16px
+  resize: none
+ .form-top,
+ .form-middle
+  display: flex
+  justify-content: space-between
+  margin: 0 -15px
+  input
+   display: block
+   width: 50%
+   margin: 10px 15px
+ .form-middle
+  margin-bottom: 10px
+ .form-bottom
+  display: flex
+  align-items: center
+  font-size: 1.2rem
+  margin-top: 20px
+  input
+   background-color: transparent
+   text-transform: uppercase
+   padding-left: 34px
+   padding-right: 34px
+   cursor: pointer
+  .success-form
+   margin-left: 40px
+   display: none
+   span
+    color: $red-color
