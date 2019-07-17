@@ -18,8 +18,8 @@ section
  position: relative
  text-align: center
  font-weight: 400
- margin: 0 0 30px 0
- padding-bottom: 32px
+ margin: 0 0 3rem 0
+ padding-bottom: 3.2rem
  &::after
   content: ''
   display: block
@@ -33,7 +33,7 @@ section
 .subtitle
  margin: 0
  padding: 0 30px
- margin-bottom: 70px
+ margin-bottom: 7rem
  text-align: center
  font-size: 1.6rem
  font-family: 'Roboto Slab', serif
@@ -91,7 +91,7 @@ section
    a
     color: #fff
     text-decoration: none
-    font-size: 1.4rem
+    font-size: 14px
 main
  text-align: center
  color: #fff
@@ -102,7 +102,7 @@ main
  p
   font-size: 2rem
   font-family: 'Roboto Slab', serif
-  margin: 32px 0 50px 0
+  margin: 3.2rem 0 5rem 0
 .services
  margin-top: -50px !important
  &-card
@@ -110,14 +110,14 @@ main
   display: flex
   flex-direction: column
   align-items: center
-  margin-top: 50px
+  margin-top: 5rem
   a
    display: flex
    justify-content: center
    align-items: center
-   margin-bottom: 30px
-   width: 87px
-   height: 87px
+   margin-bottom: 3rem
+   width: 8.7rem
+   height: 8.7rem
    border-radius: 50%
    color: $red-color
    border: 2px solid #ddd
@@ -140,7 +140,7 @@ main
   font-family: 'Roboto Slab', serif
   font-size: 1.4rem
  .carousel-men
-  margin-top: 70px
+  margin-top: 7rem
   text-align: center
   #men
    display: flex
@@ -213,7 +213,7 @@ main
      color: #fff
      width: 30px
      height: 30px
-     font-size: 1.6rem
+     font-size: 16px
      text-decoration: none
      z-index: 1
      margin: 0 2px
@@ -253,9 +253,9 @@ main
    display: flex
    list-style: none
    padding: 0
-   margin: -10px -12px
+   margin: -1rem -1.2rem
    li
-    margin: 10px 12px !important
+    margin: 1rem 1.2rem !important
     a
      text-decoration: none
      color: inherit
@@ -267,7 +267,7 @@ main
  &-card
   position: relative
   overflow: hidden
-  margin-top: 30px
+  margin-top: 3rem
   .passive
    position: absolute
    top: -100%
@@ -296,11 +296,11 @@ main
     font-size: 1.8rem
     margin: 0
    p
-    font-weight: 1.2rem
+    font-weight: 12px
     font-family: 'Roboto Slab', serif
     margin: 0
-    margin-top: 16px
-    margin-bottom: 24px
+    margin-top: 1.6rem
+    margin-bottom: 2.4rem
    a
     display: flex
     justify-content: center
@@ -308,17 +308,17 @@ main
     background-color: #fff
     color: $red-color
     text-decoration: none
-    width: 102px
-    height: 38px
+    width: 10.2rem
+    height: 3.8rem
     font-family: 'Roboto Slab', serif
     font-size: 1.4rem
     text-transform: uppercase
-    padding-top: 3px
+    padding-top: 0.3rem
     &::after
      content: ''
      display: block
-     width: 8px
-     height: 8px
+     width: 0.8rem
+     height: 0.8rem
      transform: rotate(45deg)
      border-top: 1px solid $red-color
      border-right: 1px solid $red-color
@@ -331,23 +331,32 @@ main
     top: 0
  &-parallax
   padding: 100px 0
-  margin-top: 80px
-  background-color: rgba($red-color, 0.5) !important
+  margin-top: 8rem
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  position: relative
+  .bg-color
+   position: absolute
+   top: 0
+   left: 0
+   height: 100%
+   width: 100%
+   background-color: rgba($red-color, 0.5)
   h2
    font-family: 'Roboto Slab', serif
    font-size: 3rem
    font-weight: 400
    color: #fff
    margin: 0
-   margin-top: 6px
+   margin-top: 0.6rem
    text-align: center
-   padding: 0 30px
+   padding: 0 3rem
+   z-index: 1
   a
    margin-top: 50px
+   z-index: 1
 .blog
  .container
   margin-top: -38px
@@ -363,17 +372,17 @@ main
  &:last-child
   border: none
  &-image
-  margin: 38px 0
+  margin: 3.8rem 0
   img
    width: 100%
  .head
   display: flex
  &-text
-  margin: 38px 0
-  padding-left: 38px
+  margin: 3.8rem 0
+  padding-left: 3.8rem
   .day
-   width: 72px
-   height: 72px
+   width: 7.2rem
+   height: 7.2rem
    border: 2px solid $black
    color: $grey
    display: flex
@@ -391,7 +400,7 @@ main
    display: flex
    flex-direction: column
    justify-content: center
-   padding-left: 28px
+   padding-left: 2.8rem
    h4
     font-size: 1.6rem
     text-transform: uppercase
@@ -408,7 +417,7 @@ main
     margin-top: 8px
   .description
    margin: 0
-   margin-top: 24px
+   margin-top: 2.4rem
    font-family: 'Roboto Slab', serif
    font-size: 1.4rem
   .read-more
@@ -450,7 +459,7 @@ main
    font-style: italic
    font-size: 1.8rem
   .author
-   padding-top: 50px
+   padding-top: 5rem
    text-align: center
    font-size: 2rem
 .contacts
@@ -473,7 +482,7 @@ form
  flex-direction: column
  input, 
  textarea
-  padding: 14px
+  padding: 1.4rem
   border: 1px solid $black
   color: $black
   font-family: 'Roboto Slab', serif
@@ -505,6 +514,7 @@ form
  .form-bottom
   display: flex
   align-items: center
+  flex-wrap: wrap
   font-size: 1.2rem
   margin-top: 20px
   input
@@ -513,9 +523,8 @@ form
    padding-left: 34px
    padding-right: 34px
    cursor: pointer
+   margin-right: 4rem
   .success-form
-   margin-left: 40px
-   display: none
    span
     color: $red-color
 .footer
@@ -539,8 +548,8 @@ form
    justify-content: center
    align-items: center
    margin: 0 7px
-   height: 40px
-   width: 40px
+   height: 4rem
+   width: 4rem
    border-radius: 50%
    border: 3px solid #fff
    transition: .3s
