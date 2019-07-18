@@ -75,7 +75,7 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 70%; }
+    height: 60%; }
 
 .top-nav {
   margin-top: 40px; }
