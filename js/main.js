@@ -1,3 +1,5 @@
+var childrenWork = $('.works .container .row .col-9').length;
+
 jQuery(document).ready(function() {
 	$('.client-carousel').owlCarousel({
 		items: 1,
@@ -37,6 +39,7 @@ jQuery(document).ready(function() {
 	$('.top-nav_menu li').on('click', function(event) {
 		$('.top-nav').toggleClass('top-nav_active');
 	});
+	for (var i = 4; i <= childrenWork; i++) {
+		$('.works .container .row .col-9:nth-child('+ i +')').addClass('d-none d-lg-block');
+	}    
 });
-
-
