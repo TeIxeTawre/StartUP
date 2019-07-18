@@ -33,13 +33,6 @@ jQuery(document).ready(function() {
 	$('.humburger').on('click', function(event) {
 		event.preventDefault();
 		$('.top-nav').toggleClass('top-nav_active');
-		// $('.works').toggleClass('d-none');
-		// $('.blog').toggleClass('d-none');
-		// $('.clients').toggleClass('d-none');
-		// $('.contacts').toggleClass('d-none');
-		// $('.about').toggleClass('d-none');
-		// $('.services').toggleClass('d-none');
-		// $('.footer').toggleClass('d-none');
 	});
 });
 
