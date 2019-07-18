@@ -758,7 +758,7 @@ form {
     width: 100% !important;
     height: 100vh !important;
     position: fixed;
-    top: -100%;
+    top: -100vh;
     left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
