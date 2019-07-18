@@ -76,6 +76,7 @@ section
    font-weight: 700
    color: #fff
    text-decoration: none
+   z-index: 100
  &_menu
   list-style: none
   margin: 0 -17px
@@ -186,7 +187,6 @@ main
      border-right: 2px solid #ddd
      margin-right: 6px
   .person
-   width: 263px
    height: 100%
    &-text
     color: $black
@@ -203,6 +203,7 @@ main
      margin: 0
      margin-top: 15px
    &-main
+    width: 263px
     height: 250px
     position: relative
     overflow: hidden
@@ -573,4 +574,6 @@ form
     border-color: #FD1D1D
     box-shadow: 0 0 15px #FD1D1D
     color: #FD1D1D
+
 @import "media"
+@import "menu"

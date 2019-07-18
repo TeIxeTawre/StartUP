@@ -1,0 +1,90 @@
+@media (max-width: 768px)
+ .top-nav_active
+  .logo
+   a
+    color: $red-color
+    position: fixed
+    transition: .3s ease-in
+    top: 40px
+  .top-nav_menu
+   top: 0
+  .humburger
+   position: fixed
+   top: 40px
+   right: 30px
+   margin-right: 12px !important
+   z-index: 100
+   span
+    background: transparent !important
+    &:after, &:before
+     background-color: $red-color !important
+    &:after
+     transform: rotate(-45deg) !important
+    &:before
+     transform: rotate(45deg) !important
+ .top-nav
+  &_menu
+   background-color: #fff
+   width: 100% !important
+   position: fixed
+   top: -100%
+   left: 0
+   flex-direction: column
+   justify-content: flex-start !important
+   align-items: flex-start
+   margin: 0
+   padding: 0
+   padding-top: 80px !important
+   z-index: 50
+   transition: .3s ease-in-out
+   li:first-child
+    border-top: 1px solid #000
+   li
+    height: auto
+    margin: 0
+    padding: 0 50px
+    width: 100%
+    .menu_active
+     font-size: 16px
+     color: $red-color
+     border-bottom: 1px solid $red-color
+    a
+     display: flex
+     align-items: center
+     height: 50px
+     color: #000
+     margin: 0
+     width: 100%
+     border-bottom: 1px solid #000
+     transition: .3s
+     &:hover
+      font-size: 16px
+      color: $red-color
+      border-bottom: 1px solid $red-color
+  .humburger
+   display: flex
+   align-items: center
+   padding: 2px
+   width: 24px
+   height: 20px
+   margin-right: 30px
+   span
+    height: 1px
+    width: 20px
+    background-color: #fff
+    position: relative
+    transition: .1s ease-in
+    &:after, &:before
+     content: ''
+     display: block
+     width: 20px
+     height: 1px
+     background-color: inherit
+     position: absolute
+     top: 0
+     left: 0
+     transition: .2s ease-in-out
+    &:after
+     transform: translateY(5px)
+    &:before
+     transform: translateY(-5px)   

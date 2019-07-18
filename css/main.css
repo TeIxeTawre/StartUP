@@ -83,7 +83,8 @@ section {
     font-size: 2.4rem;
     font-weight: 700;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    z-index: 100; }
   .top-nav_menu {
     list-style: none;
     margin: 0 -17px;
@@ -227,7 +228,6 @@ main {
         border-right: 2px solid #ddd;
         margin-right: 6px; }
   .about .carousel-men .person {
-    width: 263px;
     height: 100%; }
     .about .carousel-men .person-text {
       color: #555555; }
@@ -244,6 +244,7 @@ main {
         margin: 0;
         margin-top: 15px; }
     .about .carousel-men .person-main {
+      width: 263px;
       height: 250px;
       position: relative;
       overflow: hidden; }
@@ -717,7 +718,124 @@ form {
 
 @media (max-width: 768px) {
   html {
-    font-size: 8px; } }
+    font-size: 8px; }
+
+  .person {
+    width: 100%; }
+    .person-main {
+      margin: 0 auto; } }
 @media (max-width: 480px) {
   html {
     font-size: 6px; } }
+@media (max-width: 768px) {
+  .top-nav_active .logo a {
+    color: #c0301c;
+    position: fixed;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    top: 40px; }
+  .top-nav_active .top-nav_menu {
+    top: 0; }
+  .top-nav_active .humburger {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    margin-right: 12px !important;
+    z-index: 100; }
+    .top-nav_active .humburger span {
+      background: transparent !important; }
+      .top-nav_active .humburger span:after, .top-nav_active .humburger span:before {
+        background-color: #c0301c !important; }
+      .top-nav_active .humburger span:after {
+        -webkit-transform: rotate(-45deg) !important;
+                transform: rotate(-45deg) !important; }
+      .top-nav_active .humburger span:before {
+        -webkit-transform: rotate(45deg) !important;
+                transform: rotate(45deg) !important; }
+
+  .top-nav_menu {
+    background-color: #fff;
+    width: 100% !important;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px !important;
+    z-index: 50;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    .top-nav_menu li:first-child {
+      border-top: 1px solid #000; }
+    .top-nav_menu li {
+      height: auto;
+      margin: 0;
+      padding: 0 50px;
+      width: 100%; }
+      .top-nav_menu li .menu_active {
+        font-size: 16px;
+        color: #c0301c;
+        border-bottom: 1px solid #c0301c; }
+      .top-nav_menu li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 50px;
+        color: #000;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #000;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .top-nav_menu li a:hover {
+          font-size: 16px;
+          color: #c0301c;
+          border-bottom: 1px solid #c0301c; }
+  .top-nav .humburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+    width: 24px;
+    height: 20px;
+    margin-right: 30px; }
+    .top-nav .humburger span {
+      height: 1px;
+      width: 20px;
+      background-color: #fff;
+      position: relative;
+      -webkit-transition: 0.1s ease-in;
+      transition: 0.1s ease-in; }
+      .top-nav .humburger span:after, .top-nav .humburger span:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out; }
+      .top-nav .humburger span:after {
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px); }
+      .top-nav .humburger span:before {
+        -webkit-transform: translateY(-5px);
+                transform: translateY(-5px); } }

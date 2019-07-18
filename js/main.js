@@ -10,28 +10,12 @@ jQuery(document).ready(function() {
 		nav: true,
 		dots: false,
 		responsive:{
-			0:{
-	        	margin: 40,
-				stagePadding: 20,
-				center: true,
+	        0:{
+	        	margin: 0,
+				stagePadding: 0,
 	            items:1
 	        },
-			480:{
-	        	margin: 40,
-				stagePadding: 100,
-	            items:1
-	        },
-	        520:{
-	        	margin: 60,
-				stagePadding: 140,
-	            items:1
-	        },
-	        580:{
-	        	margin: 50,
-				stagePadding: 120,
-	            items:1
-	        },
-	        780:{
+	        768:{
 				margin: 40,
 				stagePadding: 60,
 	            items:2
@@ -46,4 +30,17 @@ jQuery(document).ready(function() {
 	        }
 	    }
 	});
+	$('.humburger').on('click', function(event) {
+		event.preventDefault();
+		$('.top-nav').toggleClass('top-nav_active');
+		// $('.works').toggleClass('d-none');
+		// $('.blog').toggleClass('d-none');
+		// $('.clients').toggleClass('d-none');
+		// $('.contacts').toggleClass('d-none');
+		// $('.about').toggleClass('d-none');
+		// $('.services').toggleClass('d-none');
+		// $('.footer').toggleClass('d-none');
+	});
 });
+
+
