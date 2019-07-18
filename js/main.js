@@ -34,6 +34,9 @@ jQuery(document).ready(function() {
 		event.preventDefault();
 		$('.top-nav').toggleClass('top-nav_active');
 	});
+	$('.top-nav_menu li').on('click', function(event) {
+		$('.top-nav').toggleClass('top-nav_active');
+	});
 });
 
 
