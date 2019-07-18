@@ -54,8 +54,8 @@ section {
   .btn:hover:after {
     top: 0; }
   .btn:after {
-    color: #c0301c;
-    background: #fff;
+    color: #fff;
+    background: black;
     display: block;
     padding: inherit;
     position: absolute;
