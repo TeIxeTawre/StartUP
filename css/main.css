@@ -67,6 +67,32 @@ section {
     -webkit-transition: 0.1s;
     transition: 0.1s; }
 
+.scroll-top {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  background-color: #c0301c;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 10; }
+  .scroll-top:hover {
+    -webkit-box-shadow: 0 0 3rem #c0301c;
+            box-shadow: 0 0 3rem #c0301c;
+    text-shadow: 0 0 5px #fff; }
+
 .header {
   height: 100vh;
   background-image: url(../img/header-bg.png);

@@ -39,7 +39,35 @@ jQuery(document).ready(function() {
 	$('.top-nav_menu li').on('click', function(event) {
 		$('.top-nav').toggleClass('top-nav_active');
 	});
+
 	for (var i = 4; i <= childrenWork; i++) {
 		$('.works .container .row .col-9:nth-child('+ i +')').addClass('d-none d-lg-block');
-	}    
+	}
+
+	$('.top-nav_menu li a[href*="#"]').on('click', function(e) {
+	  e.preventDefault();
+
+	  $('html, body').animate(
+	    {
+	      scrollTop: $($(this).attr('href')).offset().top + 100
+	    }, 1000);
+	});
+
+	$('.scroll-top[href*="#"]').on('click', function(e) {
+	  e.preventDefault();
+
+	  $('html, body').animate(
+	    {
+	      scrollTop: $($(this).attr('href')).offset().top
+	    }, 1000);
+	});
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $('#services').offset().top - 200){
+			$('.scroll-top').fadeIn();
+			$('.scroll-top').css('display','flex');
+		} else {
+			$('.scroll-top').fadeOut();
+		}
+	});
 });
