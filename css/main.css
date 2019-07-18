@@ -124,6 +124,12 @@ section {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      .top-nav_menu li .menu_active:after {
+        left: -10px; }
+      .top-nav_menu li .menu_active:before {
+        right: -10px; }
+      .top-nav_menu li .menu_active:after, .top-nav_menu li .menu_active:before {
+        opacity: 1; }
       .top-nav_menu li a {
         color: #fff;
         text-decoration: none;

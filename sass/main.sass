@@ -109,6 +109,13 @@ section
    height: 100%
    display: flex
    align-items: center
+   .menu_active
+    &:after
+     left: -10px
+    &:before
+     right: -10px
+    &:after, &:before
+     opacity: 1
    a
     color: #fff
     text-decoration: none
