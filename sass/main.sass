@@ -47,6 +47,23 @@ section
  border: 2px solid #fff
  border-radius: 2px
  padding: 15px 30px
+ overflow: hidden
+ position: relative
+ &:hover
+  &:after
+   top: 0
+ &:after
+  color: $red-color
+  background: #fff
+  display: block
+  padding: inherit
+  position: absolute
+  top: -100%
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 10
+  transition: 0.1s
 
  // just styles
 .header
@@ -55,6 +72,9 @@ section
  background-size: cover
  background-position: center
  position: relative
+ &-bth
+  &:after
+   content: 'get started'
  &::before
   content: ''
   display: block
@@ -93,6 +113,31 @@ section
     color: #fff
     text-decoration: none
     font-size: 14px
+    position: relative
+    &:hover
+     &:after, &:before
+      opacity: 1
+     &:after
+      left: -10px
+     &:before
+      right: -10px
+    &:after
+     content: '['
+     left: -2%
+    &:before
+     content: ']'
+     right: -2%
+    &:after, &:before
+     display: flex
+     align-items: center
+     height: 100%
+     position: absolute
+     top: 0
+     color: #fff
+     font-size: 14px
+     opacity: 0
+     transition: all .2s
+
 main
  text-align: center
  color: #fff
@@ -338,6 +383,9 @@ main
   justify-content: center
   align-items: center
   position: relative
+  &_bth
+   &:after
+    content: 'get in touch'
   .bg-color
    position: absolute
    top: 0

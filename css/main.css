@@ -48,7 +48,24 @@ section {
   text-transform: uppercase;
   border: 2px solid #fff;
   border-radius: 2px;
-  padding: 15px 30px; }
+  padding: 15px 30px;
+  overflow: hidden;
+  position: relative; }
+  .btn:hover:after {
+    top: 0; }
+  .btn:after {
+    color: #c0301c;
+    background: #fff;
+    display: block;
+    padding: inherit;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    -webkit-transition: 0.1s;
+    transition: 0.1s; }
 
 .header {
   height: 100vh;
@@ -56,6 +73,8 @@ section {
   background-size: cover;
   background-position: center;
   position: relative; }
+  .header-bth:after {
+    content: "get started"; }
   .header::before {
     content: "";
     display: block;
@@ -108,7 +127,35 @@ section {
       .top-nav_menu li a {
         color: #fff;
         text-decoration: none;
-        font-size: 14px; }
+        font-size: 14px;
+        position: relative; }
+        .top-nav_menu li a:hover:after, .top-nav_menu li a:hover:before {
+          opacity: 1; }
+        .top-nav_menu li a:hover:after {
+          left: -10px; }
+        .top-nav_menu li a:hover:before {
+          right: -10px; }
+        .top-nav_menu li a:after {
+          content: "[";
+          left: -2%; }
+        .top-nav_menu li a:before {
+          content: "]";
+          right: -2%; }
+        .top-nav_menu li a:after, .top-nav_menu li a:before {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          color: #fff;
+          font-size: 14px;
+          opacity: 0;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s; }
 
 main {
   text-align: center;
@@ -426,6 +473,8 @@ main {
         -ms-flex-align: center;
             align-items: center;
     position: relative; }
+    .works-parallax_bth:after {
+      content: "get in touch"; }
     .works-parallax .bg-color {
       position: absolute;
       top: 0;
