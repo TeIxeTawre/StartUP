@@ -89,8 +89,8 @@ section {
   transition: 0.3s;
   z-index: 10; }
   .scroll-top:hover {
-    -webkit-box-shadow: 0 0 3rem #c0301c;
-            box-shadow: 0 0 3rem #c0301c;
+    -webkit-box-shadow: 0 0 2rem #c0301c;
+            box-shadow: 0 0 2rem #c0301c;
     text-shadow: 0 0 5px #fff; }
 
 .header {

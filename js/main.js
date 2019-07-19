@@ -70,4 +70,10 @@ jQuery(document).ready(function() {
 			$('.scroll-top').fadeOut();
 		}
 	});
+
+	$('.works-menu li a').on('click', function(event) {
+		event.preventDefault();
+		$('.works-menu__active').removeClass('works-menu__active');
+		$(this).addClass('works-menu__active')
+	});
 });
