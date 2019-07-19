@@ -1,4 +1,5 @@
 var childrenWork = $('.works .container .row .col-9').length;
+var secCol = $('section').length;
 
 jQuery(document).ready(function() {
 	$('.client-carousel').owlCarousel({
@@ -61,7 +62,9 @@ jQuery(document).ready(function() {
 	      scrollTop: $($(this).attr('href')).offset().top
 	    }, 1000);
 	});
-
+			
+	$('.top-nav_menu li:first-child a').addClass('menu_active');
+	console.log($('body').children().eq(1));
 	$(window).scroll(function() {
 		if($(this).scrollTop() > $('#services').offset().top - 200){
 			$('.scroll-top').fadeIn();
@@ -69,6 +72,13 @@ jQuery(document).ready(function() {
 		} else {
 			$('.scroll-top').fadeOut();
 		}
+		for (var i = 0; i <= secCol; i++) {
+			if($(this).scrollTop() > $('body').children().eq(i).offset().top){
+				$('.menu_active').removeClass('menu_active');
+				$('.top-nav_menu').children().eq(i).find('a').addClass('menu_active');
+			}
+		}
+		
 	});
 
 	$('.works-menu li a').on('click', function(event) {
