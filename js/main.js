@@ -79,7 +79,7 @@ jQuery(document).ready(function() {
 		for (var i = 0; i <= secCol; i++) {
 			if($(this).scrollTop() > $('body').children().eq(i).offset().top - 100){
 				$('.menu_active').removeClass('menu_active');
-				$('.top-nav_menu').children().eq(i-1).find('a').addClass('menu_active');
+				$('.top-nav_menu').children().eq(i).find('a').addClass('menu_active');
 			}
 		}
 		
