@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
 
 	  $('html, body').animate(
 	    {
-	      scrollTop: $($(this).attr('href')).offset().top + 100
+	      scrollTop: $($(this).attr('href')).offset().top
 	    }, 1000); 
 	});
 
@@ -66,16 +66,20 @@ jQuery(document).ready(function() {
 	$('.top-nav_menu li:first-child a').addClass('menu_active');
 	console.log($('body').children().eq(1));
 	$(window).scroll(function() {
-		if($(this).scrollTop() > $('#services').offset().top - 200){
+		if($(this).scrollTop() > ($('header').height() / 100 * 20)){
 			$('.scroll-top').fadeIn();
 			$('.scroll-top').css('display','flex');
+			$('.top-nav').addClass('fixed_active');
+			$('header .container').css('justify-content', 'flex-end');
 		} else {
+			$('header .container').css('justify-content', 'space-between');
+			$('.top-nav').removeClass('fixed_active');
 			$('.scroll-top').fadeOut();
 		}
 		for (var i = 0; i <= secCol; i++) {
-			if($(this).scrollTop() > $('body').children().eq(i).offset().top){
+			if($(this).scrollTop() > $('body').children().eq(i).offset().top - 100){
 				$('.menu_active').removeClass('menu_active');
-				$('.top-nav_menu').children().eq(i).find('a').addClass('menu_active');
+				$('.top-nav_menu').children().eq(i-1).find('a').addClass('menu_active');
 			}
 		}
 		
